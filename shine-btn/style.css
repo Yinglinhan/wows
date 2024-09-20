@@ -1,0 +1,88 @@
+:root {
+  /* 定义全局 CSS 变量，用于紫色阴影效果 */
+  --purple-shadow: 0px -20px 52.4px -40px rgba(139, 98, 255, 0.3);
+                /* 水平偏移 垂直偏移 模糊半径 扩散半径 颜色 */
+
+  --purple-shadow-top: 0px 20px 52.4px -40px rgba(139, 98, 255, 0.1);
+}
+
+* {
+  /* 确保所有元素的盒模型包括内边距和边框 */
+  box-sizing: border-box;
+}
+
+body {
+  /* 设置页面基本样式 */
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: "system-ui";
+  overflow: hidden;
+}
+
+/* 这个是按钮的大尺寸的父级，用来让鼠标进入这个区域之后，让overlay元素跟随鼠标移动 */
+.btn-area {
+  /* 按钮区域样式 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 300px;
+  position: relative;
+}
+
+/* 这个是按钮的文字 */
+.gradient-text {
+  /* 渐变文本效果 */
+  font-size: 32px;
+  letter-spacing: 1px;
+  background: linear-gradient(white 0%, white 40%, rgba(255,255,255,0.2) 80%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h1 {
+  /* 标题样式 */
+  margin: 0;
+  font-weight: 400;
+}
+
+
+/* 这个按钮是按钮 */
+.btn-container {
+  /* 按钮容器样式 */
+  padding: 18px 60px;
+  cursor: pointer;
+  border-radius: 100px;
+  /* 复杂的阴影效果，包括外阴影和内阴影 */
+  box-shadow: /* 多层投影可以让效果更真实 同时投影颜色不透明度很低的情况下也可以和混合模式产生作用 */
+    0px 2px 9.2px -3px rgba(246, 246, 246, 0.15),
+    inset var(--purple-shadow),
+    inset var(--purple-shadow-top),
+    inset 0px -1px 6px -2px #8B62FF;
+  transition: box-shadow 0.3s linear;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  /* 用来跟随鼠标和按钮产生混合模式效果的图层 */
+  position: absolute;
+  width: 269px;
+  height: 114px;
+  background: radial-gradient(83.33% 83.33% at 50% 50%, #DBBFFF 0%, #444444 90%);
+  mix-blend-mode: color-dodge; /* 混合模式 这里是核心 */
+  filter: blur(20px);
+  border-radius: 100px;
+  pointer-events: none;
+  transform: translate(-100%, -100%);
+}
+
+
+
