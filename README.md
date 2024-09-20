@@ -1,11 +1,13 @@
 # hellocode 好奇代码 
 一些有趣的案例效果与源码
 
+
+
 ## 案例一 shine-btn
 #### Vanilla JS + GSAP
+![shine btn](https://github.com/Yinglinhan/wows/blob/main/gifs/shine-btn.gif?raw=true)
 
-
-#### 设计参考 
+设计参考 -> [推特上的一个铁子](https://x.com/alex_barashkov/status/1833509059619643638)
 
 ## 如何使用
 - 案例开发用的是vite
@@ -17,10 +19,10 @@
 
 ### 系列课程（B站课堂）
 
-- 🎁 [HTML+CSS完整网站项目实训课程](https://www.bilibili.com/cheese/play/ss25945)
+- 🎁 (https://www.bilibili.com/cheese/play/ss25945)
 - 🔥 [JavaScript + Nodejs前后端全栈全能课](https://www.bilibili.com/cheese/play/ss1226)
-- 🏆 [精通JavaScript和项目实战课程](https://www.bilibili.com/cheese/play/ss6998)
-- 🎉 [后端入门与实操 Shell + Linux + Nodejs](https://www.bilibili.com/cheese/play/ss6988)
+- 🏆 [精通JavaScript和项目实战课程(全栈课包含此课程)](https://www.bilibili.com/cheese/play/ss6998)
+- 🎉 [后端入门与实操 Shell + Linux + Nodejs(全栈课包含此课程)](https://www.bilibili.com/cheese/play/ss6988)
 
 ### 免费分享课程
 
