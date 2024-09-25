@@ -2,6 +2,11 @@
 一些有趣的案例效果与源码
 
 
+## 如何使用
+- 案例开发用的是vite
+- 进入对应项目文件夹中之后
+- 通过后端输入npm init
+- 然后 npm run dev 就能启动项目
 
 ## 案例一 shine-btn
 #### Vanilla JS + GSAP
@@ -9,11 +14,13 @@
 
 设计参考 -> [推特上的一个铁子](https://x.com/alex_barashkov/status/1833509059619643638)
 
-## 如何使用
-- 案例开发用的是vite
-- 进入对应项目文件夹中之后
-- 通过后端输入npm init
-- 然后 npm run dev 就能启动项目
+
+## 案例二 music player
+#### Vanilla JS + SVG
+![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/shine-btn.gif?raw=true)
+
+设计参考 -> [推特上的一个铁子](https://x.com/Aryana_Designs/status/1803762471628599783)
+
 
 ## 我课程资源
 
