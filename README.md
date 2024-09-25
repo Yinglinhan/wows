@@ -12,14 +12,14 @@
 #### Vanilla JS + GSAP
 ![shine btn](https://github.com/Yinglinhan/wows/blob/main/gifs/shine-btn.gif?raw=true)
 
-设计参考 -> [推特上的一个铁子](https://x.com/alex_barashkov/status/1833509059619643638)
+设计参考 -> [推特帖子](https://x.com/alex_barashkov/status/1833509059619643638)
 
 
 ## 案例二 music player
 #### Vanilla JS + SVG
 ![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/musicplayer.gif?raw=true)
 
-设计参考 -> [推特上的一个铁子](https://x.com/Aryana_Designs/status/1803762471628599783)
+设计参考 -> [推特帖子](https://x.com/Aryana_Designs/status/1803762471628599783)
 
 
 ## 我课程资源
