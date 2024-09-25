@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container">
+      <svg id="noise-layer" width="100%" height="100%">
+        <defs>
+          <filter id="noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+        </defs>
+        <rect width="100%" height="100%"  filter="url(#noise)" />
+      </svg>
+      <div class="player-btn-container">
+      
+        <div class="player-btn">
+          
+          <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="playButtonGradient" x1="0" y1="0" x2="0" y2="1" >
+                <stop offset="0" stop-color="white"  />
+                <stop offset="1" stop-color="gray"  />
+              </linearGradient>
+            </defs>
+            <path  id="play-btn" fill="url(#playButtonGradient)" d="M897.143467 597.051733l-464.648534 311.5264c-46.976 31.488-110.592 18.944-142.08-28.023466A102.4 102.4 0 0 1 273.066667 823.5264V200.4736c0-56.5504 45.8496-102.4 102.4-102.4a102.4 102.4 0 0 1 57.028266 17.348267l464.64 311.5264c46.976 31.488 59.528533 95.104 28.032 142.08a102.4 102.4 0 0 1-28.023466 28.023466z" ></path>
+            <path id="pause-btn" style="display: none;" fill-rule="evenodd" clip-rule="evenodd" 
+            d="M189.497 161C173.206 161 160 174.206 160 190.496V834.503C160 850.794 173.206 864 189.497 864H351.727C368.018 864 381.224 850.794 381.224 834.503V190.497C381.224 174.206 368.018 161 351.727 161H189.497ZM671.273 161C654.982 161 641.776 174.206 641.776 190.496V834.503C641.776 850.794 654.982 864 671.273 864H833.503C849.794 864 863 850.794 863 834.503V190.497C863 174.206 849.794 161 833.503 161H671.273Z" 
+            fill="url(#playButtonGradient)"/>
+          </svg>
+
+        </div>
+      </div>
+      <div class="progress-container">
+   
+        <div class="progress">
+            <svg id="progress-lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+         
+            </svg>
+        </div>
+      </div>
+    </div>
+    <audio src="./public/m.MP3"></audio>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

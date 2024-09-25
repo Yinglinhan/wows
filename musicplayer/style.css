@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  width: 300px;
+  height: 100px;
+  background: linear-gradient( #333,#111);
+  position: relative;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 0;
+
+
+  box-shadow: inset 0 4px 2px -4px rgba(255, 255, 255, 0.5),
+  0 10px 2px -2px #111,
+  0 12px 6px 2px rgba(0, 0, 0, 0.4),
+
+  0 22px 16px -8px rgba(0, 0, 0, 0.5);
+  border: 1px solid #111;
+  overflow: hidden;
+}
+
+#noise-layer{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+
+  /* opacity: 0.05; */
+}
+
+.player-btn-container{
+  z-index: 1;
+
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 -6px 10px 0 rgba(255, 255, 255, 0.07),
+            inset 0 -1px 1px 0 rgba(255, 255, 255, 0.2);
+
+}
+.player-btn{
+  width: 85%;
+  height: 85%;
+  background-color: #222;
+  border-radius: 50%;
+  box-shadow:inset 0 2px 0px 0 rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  transform: translateY(-1px);
+  cursor: pointer;
+}
+
+
+
+.progress-container{
+
+  width:200px;
+  height: 80px;
+  /* background-color: #121212; */
+  border-radius: 20px;
+  box-shadow: inset 0 6px 6px -2px black,
+  inset 0 -1px 1px 0px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.progress{
+  width: 100%;
+  height: 100%;
+
+  border-radius: 20px;
+  overflow: hidden;
+  position:absolute;
+  z-index: -10;
+  /* display:none */
+  /* mix-blend-mode: lighten; */
+
+}
