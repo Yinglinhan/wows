@@ -1,8 +1,7 @@
 import './style.css'
 
-// 我要给svg中动态添加10个line
-// 每条线都是垂直的 水平居中 
-// 每条线都是白色的 粗细为1 两头是round
+
+// 通过js来创建播放进度的竖线
 
 const progressLineContainer = document.getElementById('progress-lines')
 
@@ -72,10 +71,10 @@ filter.innerHTML = `
 `;
 defs.appendChild(filter);
 
-// 创建一个组元素来包含白色矩形和红色矩形
+// 创建一个组元素来包含红色进度条所有元素
 const rectGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-// 创建一个白色的矩形
+// 创建红色的底部投影效果
 const lineBgBlur = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 lineBgBlur.setAttribute('x', '16.5');
 lineBgBlur.setAttribute('y', '0');
@@ -85,7 +84,7 @@ lineBgBlur.setAttribute('fill', '#FF0000');
 lineBgBlur.setAttribute('fill-opacity', '0.3');
 lineBgBlur.setAttribute('filter', 'url(#myFilter)');
 
-// 添加一个垂直的看着有点微微发光的红色矩形
+// 添加一个垂直的看着有点微微发光的红色矩形作为进度条指针
 const redRectasLine = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 redRectasLine.setAttribute('x', '18.5px');
 redRectasLine.setAttribute('y', '0');
@@ -93,7 +92,7 @@ redRectasLine.setAttribute('width', '3');
 redRectasLine.setAttribute('height', '100%');
 redRectasLine.setAttribute('fill', '#FF0000');
 
-// 创建一个横向更宽的红色椭圆
+// 创建一个横向更宽的红色椭圆，放在指针顶部位置
 const redEllipse = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
 redEllipse.setAttribute('cx', '20');
 redEllipse.setAttribute('cy', '-3');
@@ -111,7 +110,7 @@ shadowFilter.innerHTML = `
 defs.appendChild(shadowFilter);
 
 
-// 创建一个圆角小矩形，然后旋转45度
+// 创建一个圆角小矩形，然后旋转45度，放在指针底部
 const redRectasLine2 = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 redRectasLine2.setAttribute('x', '-4');
 redRectasLine2.setAttribute('y', '-4');
@@ -149,30 +148,32 @@ function updateProgress(percentage) {
     // 确保百分比在 0-100 之间
     percentage = Math.max(0, Math.min(100, percentage));
     
-    // 更新 grayLines 的 clip-path
+    // 更新 grayLines 的 clip-path，控制白色的竖条显示的宽度
     grayLines.setAttribute('clip-path', `inset(0  0 0 ${percentage}%)`);
     
-    // 更新 rectGroup 的位置
+    // 更新 rectGroup 的位置，控制红色进度条的移动
     const translateX = (percentage / 100) * svgWidth;
     // 这里要减去20，因为rectGroup的里面元素的初始位置已经靠右20左右了，不这样做不太好调整这几个元素的位置
     rectGroup.setAttribute('transform', `translate(${translateX + initialTranslateX}, 0)`);
 }
 
+// 你可以在需要的时候调用 updateProgress 函数来更新进度
 // 示例：设置进度为 0%
 updateProgress(0);
 
 
 
 
-// 你可以在需要的时候调用 updateProgress 函数来更新进度
+
 let progress = 0;
 let lastTime = 0;
 let duration = 4000; // 动画持续时间，单位毫秒
 let animationId = null; // 用于存储 requestAnimationFrame 的 ID
 let isAnimating = false; // 用于跟踪动画状态
 
+// 让进度条动起来
 function animate(currentTime) {
-    // console.log(currentTime)
+
     if (!lastTime) lastTime = currentTime;
     const deltaTime = currentTime - lastTime;
     
@@ -197,11 +198,8 @@ function animate(currentTime) {
             const pauseBtn = document.querySelector('#pause-btn');
             playBtn.style.display = 'block';
             pauseBtn.style.display = 'none';
-
-
         }, 500);
     }
-    
     lastTime = currentTime;
 }
 
@@ -243,7 +241,7 @@ function startAnimation() {
 
 
 
-
+// 监听音频加载完成事件
 audio.addEventListener('loadedmetadata', () => {
     setDuration() // 将 duration 设置为 audio 的总时长（单位毫秒）
 });
@@ -271,7 +269,7 @@ progressElement.addEventListener('click', (event) => {
      const offsetX = event.clientX - rect.left;
      const percentage = (offsetX / rect.width) * 100;
  
-     console.log(`Clicked at ${percentage.toFixed(2)}% of the progress bar`);
+    //  console.log(`Clicked at ${percentage.toFixed(2)}% of the progress bar`);
      
      // 更新进度
      updateProgress(percentage);
@@ -289,7 +287,7 @@ progressElement.addEventListener('click', (event) => {
 
 
 
-
+// 音频波纹效果-------------
 // 创建音频上下文
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 const analyser = audioContext.createAnalyser();

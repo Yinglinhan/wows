@@ -103,7 +103,5 @@ body{
   overflow: hidden;
   position:absolute;
   z-index: -10;
-  /* display:none */
-  /* mix-blend-mode: lighten; */
 
 }
