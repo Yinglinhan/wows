@@ -17,7 +17,7 @@
 
 ## 案例二 music player
 #### Vanilla JS + SVG
-![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/shine-btn.gif?raw=true)
+![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/musicplayer.gif?raw=true)
 
 设计参考 -> [推特上的一个铁子](https://x.com/Aryana_Designs/status/1803762471628599783)
 
