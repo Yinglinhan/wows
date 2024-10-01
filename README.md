@@ -22,6 +22,13 @@
 设计参考 -> [推特帖子](https://x.com/Aryana_Designs/status/1803762471628599783)
 
 
+## 案例三 scroll-drag
+#### Vanilla JS + GSAP
+![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/musicplayer.gif?raw=true)
+
+设计参考 -> [推特帖子](https://twitter.com/vgruev/status/1838594583069962735)
+
+
 ## 我课程资源
 
 ### 系列课程（B站课堂）
