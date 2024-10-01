@@ -32,8 +32,8 @@
 ## 我课程资源
 
 ### 系列课程（B站课堂）
-- 🎁 <img src="https://example.com/html-css-icon.png" width="300" height="187" alt="HTML和CSS课程"> [HTML和CSS项目实战课程](https://www.bilibili.com/cheese/play/ss25945)
-- 🔥 <img src="https://example.com/js-fullstack-icon.png" width="300" height="187" alt="JavaScript全栈课程"> [JavaScript + Nodejs前后端全栈全能课](https://www.bilibili.com/cheese/play/ss1226)
+- 🎁 <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/project.png?raw=true" width="300" height="187" alt="HTML和CSS课程"> [HTML和CSS项目实战课程](https://www.bilibili.com/cheese/play/ss25945)
+- 🔥 <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/full-stack.png?raw=true" width="300" height="187" alt="JavaScript全栈课程"> [JavaScript + Nodejs前后端全栈全能课](https://www.bilibili.com/cheese/play/ss1226)
 - 🏆 [精通JavaScript和项目实战课程(全栈课包含此课程)](https://www.bilibili.com/cheese/play/ss6998)
 - 🎉 [后端入门与实操 Shell + Linux + Nodejs(全栈课包含此课程)](https://www.bilibili.com/cheese/play/ss6988)
 
