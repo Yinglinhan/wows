@@ -32,8 +32,19 @@
 ## 我课程资源
 
 ### 系列课程（B站课堂）
-- 🎁 <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/project.png?raw=true" width="300" height="187" alt="HTML和CSS课程"> [HTML和CSS项目实战课程](https://www.bilibili.com/cheese/play/ss25945)
-- 🔥 <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/full-stack.png?raw=true" width="300" height="187" alt="JavaScript全栈课程"> [JavaScript + Nodejs前后端全栈全能课](https://www.bilibili.com/cheese/play/ss1226)
+
+ <a href="https://www.bilibili.com/cheese/play/ss25945">
+   <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/project.png?raw=true" width="300" height="187" alt="HTML和CSS课程" style="border-radius: 10px;">
+ </a></br>
+ 
+ [HTML和CSS项目实战课程](https://www.bilibili.com/cheese/play/ss25945)
+
+ <a href="https://www.bilibili.com/cheese/play/ss1226">
+   <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/full-stack.png?raw=true" width="300" height="187" alt="JavaScript全栈课程" style="border-radius: 10px;">
+ </a></br>
+  
+  [JavaScript + Nodejs前后端全栈全能课](https://www.bilibili.com/cheese/play/ss1226)
+
 - 🏆 [精通JavaScript和项目实战课程(全栈课包含此课程)](https://www.bilibili.com/cheese/play/ss6998)
 - 🎉 [后端入门与实操 Shell + Linux + Nodejs(全栈课包含此课程)](https://www.bilibili.com/cheese/play/ss6988)
 
@@ -42,11 +53,20 @@
 #### 🔥HTML CSS网站开发入门指南 
 
 
+
+ <a href="https://www.bilibili.com/video/BV1cm42137by">
+   <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/wdg.png?raw=true" width="300" height="187" alt="网站开发入门指南" style="border-radius: 10px;">
+ </a></br>
+
 - 视频教程：[BV1cm42137by](https://www.bilibili.com/video/BV1cm42137by)
 - 目录网站：[wdg.hellocode.fun](https://wdg.hellocode.fun)
 - 课程源码：[百度网盘链接](https://pan.baidu.com/s/18vNsGTc6bkqg1eF8ZR5-gw?pwd=u3zd) (提取码: u3zd)
 
 #### 🔥别小看SVG系列分享
+
+<a href="https://www.bilibili.com/video/BV1oy411i77z">
+   <img src="https://github.com/Yinglinhan/wows/blob/main/coursepng/svg.png?raw=true" width="300" height="187" alt="网站开发入门指南" style="border-radius: 10px;">
+ </a></br>
 
 - 视频教程：[BV1oy411i77z](https://www.bilibili.com/video/BV1oy411i77z)
 - 课程目录网站：[wdg.hellocode.fun](https://wdg.hellocode.fun)
