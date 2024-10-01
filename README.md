@@ -24,7 +24,7 @@
 
 ## 案例三 scroll-drag
 #### Vanilla JS + GSAP
-![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/musicplayer.gif?raw=true)
+![music player](https://github.com/Yinglinhan/wows/blob/main/gifs/drag-scroll.gif?raw=true)
 
 设计参考 -> [推特帖子](https://twitter.com/vgruev/status/1838594583069962735)
 
