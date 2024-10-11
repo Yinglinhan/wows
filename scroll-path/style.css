@@ -1,0 +1,81 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+
+  background-color: #000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+  box-sizing: border-box;
+}
+
+html{
+  /* overflow-x: hidden; */
+}
+
+body {
+  display: flex;
+
+  /* align-items: center; */
+  flex-direction: column;
+  height: 1000vh;
+}
+
+.container{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  right: 0;
+  top: 80vh;
+  transform: scale(1.35);
+}
+
+.svg2,.svg3{
+  position: absolute;
+  mix-blend-mode: multiply;
+  /* border:1px solid red; */
+}
+.svg2{
+
+}
+
+/* .orange-path{
+  mix-blend-mode: multiply;
+} */
+.svg3{
+  filter: blur(40px);
+  
+
+}
+
+#front-svg{
+  position: absolute;
+}
+
+svg{
+  border:1px solid red;
+  width: 100%;
+  /* transform: scale(1.5); */
+}
+
+.overlay{
+  position: fixed;
+
+  width: 100%;
+  top: 60vh;
+  left: 0;
+  right: 0;
+  /* height: 100%; */
+  opacity: 1;
+  z-index: 100;
+  /* border:10px solid yellow; */
+  mix-blend-mode: multiply;
+}
