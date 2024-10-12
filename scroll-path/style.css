@@ -16,7 +16,7 @@
 }
 
 html{
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 body {
@@ -28,23 +28,27 @@ body {
 }
 
 .container{
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   right: 0;
   top: 80vh;
-  transform: scale(1.35);
+
+}
+
+svg{
+  transform:scale(1.5)
 }
 
 .svg2,.svg3{
   position: absolute;
-  mix-blend-mode: multiply;
+
   /* border:1px solid red; */
 }
 .svg2{
-
+  mix-blend-mode: multiply;
 }
 
 /* .orange-path{
@@ -65,17 +69,8 @@ svg{
   width: 100%;
   /* transform: scale(1.5); */
 }
-
 .overlay{
-  position: fixed;
-
-  width: 100%;
-  top: 60vh;
-  left: 0;
-  right: 0;
-  /* height: 100%; */
-  opacity: 1;
-  z-index: 100;
-  /* border:10px solid yellow; */
+  position: absolute;
   mix-blend-mode: multiply;
+  will-change: opacity;
 }

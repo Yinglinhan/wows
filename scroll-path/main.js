@@ -7,91 +7,50 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-// 帮我获取#svg2,#svg3
-// const svg2 = document.getElementById('svg2');
-// const svg3 = document.getElementById('svg3');
-
-// 帮我获取#svg2,#svg3的path
-// const svg2Path = svg2.querySelector('svg2Path');
-// const svg3Path = svg3.querySelector('svg3Path');
-
-
-  // 帮我创建一个动画，动画内容是：
-  // 1. 让#svg2Path的stroke-dashoffset从20000变为0
-  // 2. 让#svg3Path的stroke-dashoffset从20000变为0
-  // gsap.to("#svg2Path", {
-  //   strokeDashoffset: 0,
-  //   duration: 6,
-  //   ease: "power1.inOut"
-  // });
-
-  // gsap.to("#svg3Path", {
-  //   strokeDashoffset: 0,
-  //   duration: 6,
-  //   ease: "power1.inOut",
-
-  // });
-
-// 这里实现滚动逻辑
-// 获取container
-// const container = document.querySelector('.container');
-// // 获取渐变
-// const line = document.getElementById('line');
-
-// // line.setAttribute('gradientTransform', `translate(0,-300)`);
-// window.addEventListener('scroll',()=>{
-//   console.log(window.scrollY);
-//   // container.style.transform = `translateY(${window.scrollY}px)`;
-//   // gradientTransform="translate(0,-300)" 
-
-//   // line.setAttribute('gradientTransform', `translate(0,-${window.scrollY/3})`);
-//   // line.gradientTransform = `translate(0,-${window.scrollY})`;
-// })
-
-window.addEventListener('scroll',()=>{
-  console.log(window.scrollY);
-})
 
 
 function init(){
-  gsap.set('.unvisible',{
-    opacity: 0
-  })
+  gsap.set('.unvisible',{opacity:0})
 }
 
 init()
 
+const container = document.querySelector('.container')
 
-
-gsap.to('.overlay',{
-  y: -1000,
-  scrollTrigger:{
-
-    start: 'top top',
-    end: '+=1500',
-    scrub: 1,
-    
-  },
-  onComplete:()=>{
-    gsap.set('.overlay',{
-      display: 'none'
-    })
-  }
+window.addEventListener('scroll',()=>{
+  console.log(scrollY)
+  container.style.transform = `translate3d(0,${scrollY}px,0)`
 })
 
-gsap.to('.container',{
-  y: -300,
-  scrollTrigger:{
-    start: '1500',
-    end: '3500',
-    scrub: 1,
-  }
-})
-gsap.to('.path-move',{
-  strokeDashoffset: 0,
-  scrollTrigger:{
-    start: '1500',
-    end: '10000',
-    scrub: 1,
-  }
-})
+
+// let tl = gsap.timeline({
+//   scrollTrigger:{
+//     trigger:'.section-body',
+//     start:'top top',
+//     end:'bottom bottom',
+//     scrub:true,
+//     // pin:'transform'
+//   }
+// })
+
+// // 第一阶段：保持原位（固定效果）
+// tl.to(".container", {
+//   y: 0,
+//   duration: 1,
+//   ease: "none",
+// });
+
+// // 第二阶段：慢速移动
+// tl.to(".container", {
+//   y: () => -window.innerHeight * 0.3, // 向上移动视窗高度的 30%
+//   duration: 1,
+//   ease: "none",
+// });
+
+// // 第三阶段：快速移动
+// tl.to(".container", {
+//   y: () => -window.innerHeight * 0.8, // 向上移动视窗高度的 80%
+//   duration: 1,
+//   ease: "none",
+// });
+
