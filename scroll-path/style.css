@@ -27,6 +27,8 @@ body {
   height: 1000vh;
 }
 
+
+
 .container{
   position: fixed;
   display: flex;
@@ -34,8 +36,14 @@ body {
   align-items: center;
   width: 100vw;
   right: 0;
-  top: 80vh;
-  transform: scale(1.35);
+  top: 40vh;
+  /* border:10px solid green; */
+
+}
+
+.container svg{
+  transform: scale(1.38);
+  transform-origin: top;
 }
 
 .svg2,.svg3{
@@ -52,7 +60,7 @@ body {
 } */
 .svg3{
   filter: blur(40px);
-  
+  opacity: 0.6;
 
 }
 
@@ -61,7 +69,7 @@ body {
 }
 
 svg{
-  border:1px solid red;
+  /* border:1px solid red; */
   width: 100%;
   /* transform: scale(1.5); */
 }
